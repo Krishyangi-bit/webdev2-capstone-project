@@ -1,0 +1,254 @@
+.home-page {
+  display: grid;
+  gap: 48px;
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.home-hero-copy {
+  max-width: 640px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 12px;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.home-hero h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  margin-bottom: 24px;
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+.home-copy {
+  max-width: 520px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.home-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.home-hero-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.code-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.code-card-header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green { background: #22c55e; }
+.yellow { background: #fbbf24; }
+.red { background: #f87171; }
+
+.code-card pre {
+  background: transparent;
+  color: var(--text-primary);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.code-keyword {
+  color: #7dd3fc;
+}
+
+.code-string {
+  color: #f9a8d4;
+}
+
+.score-pill {
+  display: inline-flex;
+  margin-top: 22px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(163, 230, 53, 0.12);
+  border: 1px solid rgba(163, 230, 53, 0.22);
+  color: var(--accent);
+  font-weight: 700;
+  width: fit-content;
+}
+
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  background: var(--bg-secondary);
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.stat-block {
+  text-align: center;
+}
+
+.stat-value {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.feature-grid,
+.process-section,
+.recent-activity,
+.cta-banner {
+  padding: 32px 0;
+}
+
+.feature-grid h2,
+.process-section h2,
+.dashboard-panel h2 {
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 22px;
+}
+
+.feature-cards,
+.process-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.feature-card,
+.process-card {
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover,
+.process-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-accent);
+  box-shadow: 0 8px 32px var(--accent-glow);
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+}
+
+.feature-card h3,
+.process-card h3 {
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 12px;
+}
+
+.feature-card p,
+.process-card p {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.process-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.process-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.cta-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  background: linear-gradient(135deg, #838b9c 0%, #304678 100%);
+  border-top: 1px solid var(--border-accent);
+  border-radius: var(--radius);
+}
+
+.cta-banner h2 {
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 8px;
+}
+
+.cta-banner p {
+  color: var(--text-muted);
+}
+
+@media (max-width: 1024px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+  .stats-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .stats-bar {
+    grid-template-columns: 1fr;
+  }
+  .home-hero-buttons {
+    flex-direction: column;
+  }
+}

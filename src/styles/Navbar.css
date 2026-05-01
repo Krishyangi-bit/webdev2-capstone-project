@@ -1,0 +1,113 @@
+.nav-shell {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: rgba(10, 14, 26, 0.85);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+.nav-left,
+.nav-links,
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.nav-logo {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.nav-subtitle {
+  color: var(--text-muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.nav-links {
+  gap: 18px;
+}
+
+.nav-link {
+  color: var(--text-primary);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent);
+}
+
+.nav-link.active {
+  border-bottom: 2px solid var(--accent);
+}
+
+.theme-toggle {
+  margin-left: 16px;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  padding: 10px 18px;
+  border-radius: 999px;
+}
+
+.nav-hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  gap: 6px;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.nav-hamburger span {
+  width: 22px;
+  height: 2px;
+  background: var(--text-primary);
+  display: block;
+  border-radius: 999px;
+}
+
+@media (max-width: 900px) {
+  .nav-hamburger {
+    display: flex;
+  }
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(10, 14, 26, 0.95);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 24px;
+    gap: 12px;
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .nav-links.nav-open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,171 @@
+.review-page {
+  display: grid;
+  gap: 28px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+}
+
+.review-panel,
+.review-output {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.review-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.review-panel-header h2 {
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 8px;
+}
+
+.review-panel-header select {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  padding: 10px 14px;
+}
+
+.review-panel textarea {
+  width: 100%;
+  min-height: 420px;
+  padding: 24px;
+  background: #0d1117;
+  color: #e2e8f0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  resize: vertical;
+  outline: none;
+}
+
+.review-panel textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.review-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-muted);
+}
+
+.review-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.review-result-card {
+  padding: 28px;
+  min-height: 380px;
+}
+
+.score-header {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.score-ring {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(163, 230, 53, 0.08);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 28px rgba(163, 230, 53, 0.18);
+  border: 1px solid rgba(163, 230, 53, 0.16);
+}
+
+.score-ring-success {
+  background: rgba(74, 222, 128, 0.08);
+  box-shadow: 0 0 28px rgba(74, 222, 128, 0.18);
+}
+
+.score-ring-warning {
+  background: rgba(251, 191, 36, 0.08);
+  box-shadow: 0 0 28px rgba(251, 191, 36, 0.18);
+}
+
+.score-ring-danger {
+  background: rgba(248, 113, 113, 0.08);
+  box-shadow: 0 0 28px rgba(248, 113, 113, 0.18);
+}
+
+.score-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.score-sub {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.result-meta {
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.review-cards-row {
+  display: grid;
+  gap: 18px;
+}
+
+.review-placeholder {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 46px 24px;
+  color: var(--text-muted);
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  margin-bottom: 18px;
+  color: var(--accent);
+}
+
+.margin-top {
+  margin-top: 12px;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--bg-card);
+  border-left: 4px solid var(--success);
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  z-index: 10000;
+}
+
+@media (max-width: 900px) {
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+}

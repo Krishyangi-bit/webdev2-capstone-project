@@ -1,0 +1,25 @@
+.line-chart-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.line-chart-svg {
+  width: 100%;
+  height: auto;
+}
+
+.line-chart-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.chart-empty {
+  min-height: 240px;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  padding: 40px;
+}
