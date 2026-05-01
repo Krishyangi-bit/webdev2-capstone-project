@@ -16,19 +16,16 @@ A student-style React web application for code review simulation and progress tr
 ## Project Setup
 
 1. Install dependencies:
-   ```bash
+   bash
    npm install
-   ```
 
 2. Start the development server:
-   ```bash
+   bash
    npm run dev
-   ```
 
 3. Build for production:
-   ```bash
+   bash
    npm run build
-   ```
 
 ## Project Structure
 
